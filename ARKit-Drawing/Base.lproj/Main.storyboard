@@ -59,21 +59,20 @@
                                 </userDefinedRuntimeAttributes>
                             </visualEffectView>
                             <visualEffectView opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RK5-mG-jKn">
-                                <rect key="frame" x="16" y="618" width="158" height="29"/>
+                                <rect key="frame" x="16" y="618" width="170" height="29"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="KaD-5l-R64">
-                                    <rect key="frame" x="0.0" y="0.0" width="158" height="29"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="170" height="29"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RAH-ye-saP">
-                                            <rect key="frame" x="0.0" y="0.0" width="158" height="29"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="170" height="29"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="Ldw-TI-gOS">
-                                                <rect key="frame" x="0.0" y="0.0" width="158" height="29"/>
+                                            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Ldw-TI-gOS">
+                                                <rect key="frame" x="0.0" y="0.0" width="170" height="29"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 <subviews>
-                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jVE-nl-i8i">
-                                                        <rect key="frame" x="0.0" y="0.0" width="160" height="29"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jVE-nl-i8i">
+                                                        <rect key="frame" x="0.0" y="0.0" width="170" height="29"/>
                                                         <segments>
                                                             <segment title="Freeform"/>
                                                             <segment title="Plane"/>
@@ -85,6 +84,12 @@
                                                         </connections>
                                                     </segmentedControl>
                                                 </subviews>
+                                                <constraints>
+                                                    <constraint firstItem="jVE-nl-i8i" firstAttribute="leading" secondItem="Ldw-TI-gOS" secondAttribute="leading" id="LAA-L1-v8t"/>
+                                                    <constraint firstItem="jVE-nl-i8i" firstAttribute="centerY" secondItem="Ldw-TI-gOS" secondAttribute="centerY" id="e8h-mY-BDk"/>
+                                                    <constraint firstAttribute="trailing" secondItem="jVE-nl-i8i" secondAttribute="trailing" constant="-2" id="vQR-f8-I98"/>
+                                                    <constraint firstItem="jVE-nl-i8i" firstAttribute="top" secondItem="Ldw-TI-gOS" secondAttribute="top" id="xfU-9A-mqt"/>
+                                                </constraints>
                                             </view>
                                             <vibrancyEffect>
                                                 <blurEffect style="light"/>
@@ -93,7 +98,7 @@
                                     </subviews>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="158" id="5d0-eI-fhj"/>
+                                    <constraint firstAttribute="width" constant="170" id="5d0-eI-fhj"/>
                                     <constraint firstAttribute="height" constant="29" id="WNC-pW-iAf"/>
                                 </constraints>
                                 <blurEffect style="light"/>
@@ -103,6 +108,32 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </visualEffectView>
+                            <view opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hvd-J5-Taq">
+                                <rect key="frame" x="20" y="40" width="158" height="30"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ALI-sH-q3R">
+                                        <rect key="frame" x="0.0" y="0.0" width="158" height="27"/>
+                                        <segments>
+                                            <segment title="⏸"/>
+                                            <segment title="▶️"/>
+                                            <segment title="⏹"/>
+                                        </segments>
+                                        <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <connections>
+                                            <action selector="animationControl:" destination="BV1-FR-VrT" eventType="valueChanged" id="qGG-ez-N6M"/>
+                                            <action selector="changeObjectMode:" destination="BV1-FR-VrT" eventType="valueChanged" id="Ik0-hc-9wc"/>
+                                        </connections>
+                                    </segmentedControl>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ALI-sH-q3R" firstAttribute="leading" secondItem="Hvd-J5-Taq" secondAttribute="leading" id="9YM-fd-7rG"/>
+                                    <constraint firstAttribute="width" constant="158" id="Deq-td-Sbw"/>
+                                    <constraint firstItem="ALI-sH-q3R" firstAttribute="top" secondItem="Hvd-J5-Taq" secondAttribute="top" id="LRL-KJ-QDJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="ALI-sH-q3R" secondAttribute="bottom" constant="4" id="Off-Dk-CYB"/>
+                                    <constraint firstAttribute="trailing" secondItem="ALI-sH-q3R" secondAttribute="trailing" id="cJ4-sJ-r6T"/>
+                                    <constraint firstAttribute="height" constant="30" id="vdJ-0c-cR9"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -113,6 +144,8 @@
                             <constraint firstItem="ZCE-wD-2E2" firstAttribute="bottom" secondItem="RK5-mG-jKn" secondAttribute="bottom" constant="20" id="Pfd-Nb-YUs"/>
                             <constraint firstItem="RK5-mG-jKn" firstAttribute="leading" secondItem="ZCE-wD-2E2" secondAttribute="leading" constant="16" id="SnR-GG-ypT"/>
                             <constraint firstItem="ZCE-wD-2E2" firstAttribute="trailing" secondItem="nGv-ui-K4i" secondAttribute="trailing" constant="17" id="i2L-km-UXq"/>
+                            <constraint firstItem="Hvd-J5-Taq" firstAttribute="leading" secondItem="ZCE-wD-2E2" secondAttribute="leading" constant="20" id="qFH-GV-fOK"/>
+                            <constraint firstItem="Hvd-J5-Taq" firstAttribute="top" secondItem="ZCE-wD-2E2" secondAttribute="top" constant="20" id="rnK-XK-Cta"/>
                             <constraint firstItem="Hss-D4-YVK" firstAttribute="leading" secondItem="ZCE-wD-2E2" secondAttribute="leading" id="tq9-FB-eeV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZCE-wD-2E2"/>
